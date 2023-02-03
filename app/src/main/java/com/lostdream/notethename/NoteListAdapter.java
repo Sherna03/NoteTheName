@@ -12,6 +12,8 @@ import java.util.List;
 
 public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteListViewHolder> {
 
+    //Adaptador para utilizar el recyclerView
+
     private final List<NoteList> noteLists;
     private RecyclerView recyclerView ;
     private final ClickedListener clickedListener;

@@ -8,4 +8,6 @@
     app:title="NoteTheName"
     app:titleTextColor="@color/white">
 
+    <!--Barra superior personalizada-->
+
 </androidx.appcompat.widget.Toolbar>

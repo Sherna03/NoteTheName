@@ -19,11 +19,14 @@ public class MainActivity extends AppCompatActivity implements ClickedListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Ajuste del recycler view a vertical
         recyclerView = findViewById(R.id.notas);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
+        //Array para almacenar información en el recyclerView
         List<NoteList> noteLists = new ArrayList<>();
 
+        //Test de recyclersViews
         NoteList nota1 = new NoteList();
         nota1.titulo = "Titulo1";
         noteLists.add(nota1);
@@ -52,11 +55,14 @@ public class MainActivity extends AppCompatActivity implements ClickedListener{
         nota7.titulo = "Titulo7";
         noteLists.add(nota7);
 
+        //Llamar al adaptador para organizar la informacion y cantidad de notas
         NoteListAdapter adapter = new NoteListAdapter(noteLists, recyclerView, this);
+        //Mostrar en pantalla
         recyclerView.setAdapter(adapter);
 
     }
 
+    //Implementación de función para saber que recyclerView se esta pulsando
     @Override
     public void onPictureClicked(int position, String titulo) {
         Toast.makeText(this, titulo, Toast.LENGTH_SHORT).show();
